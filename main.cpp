@@ -4,12 +4,12 @@ using namespace std;
 
 int main() {
     short int a1;                              //2
-    int a2;                                    //4
+    int a2;                                    //4 int и unsigned int одинаковы по размеру тк просто по разному используеться выделенная им память
     unsigned int a3;                           //4
     long int a4;                               //4
     long long int a5;                          //8
     float a6;                                  //4
-    long double a7;                            //16
+    long double a7;                            //16 long double — это тип с плавающей запятой, размер которого больше или равен размеру типа double. Количество знаков мантиссы:19
     double a8;                                 //8
     short a9;                                  //2
     bool a10;                                  //1
@@ -20,7 +20,7 @@ int main() {
     unsigned long int b4;                      //4
     unsigned long long int b5;                 //8
     unsigned short b9;                         //2
-    unsigned char b8;                          //1
+    unsigned char b8;                          //1 char	-128...127  unsigned char 0... 255
 
     cout << typeid(a1).name() << ":" << sizeof(a1) << endl;
     cout << typeid(a2).name() << ":" << sizeof(a2) << endl;
@@ -40,5 +40,6 @@ int main() {
     cout << typeid(b5).name() << ":" << sizeof(b5) << endl;
     cout << typeid(b9).name() << ":" << sizeof(b9) << endl;
     cout << typeid(b8).name() << ":" << sizeof(b8) << endl;
+
     return 0;
 }
