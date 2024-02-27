@@ -48,7 +48,7 @@ int main() {
     //Задание 2
 
     float all_f[6]{-1.1, -1.5, -1.9, 1.1, 1.5, 1.9};
-    cout << "Task 2"<< endl;
+    cout << "Task 2" << endl;
     cout << "float to int" << endl;
     for (int i = 0; i < size(all_f); i++) {
         int f = all_f[i];
@@ -93,7 +93,7 @@ int main() {
     cout << "short int :" << k << endl;
     cout << "unsigned short int :" << uk << endl;
     cout << "long int :" << l << endl;
-    cout << "char :" << cc << ")"<< endl;
+    cout << "char :" << cc << ")" << endl;
 
     // 2 часть
 
@@ -131,20 +131,40 @@ int main() {
     unsigned long int ling = -1; // б)
     cout << "max of unsigned long int :" << ling << endl;
 
-    cout << "Task 5" << endl;
-    unsigned  long int ui;
+    cout << "Task 5" << endl; // не изменится
+    unsigned long int ui;
     long int i;
     float f;
-     i = -1;
-     ui = i; // макс long int
-     cout << ui <<endl;
-     f = ui;
-     cout << f << endl;
-     f += 1; //8000
-     cout << f << endl;
+    i = -1;
+    ui = i; // макс long int
+    cout << ui << endl;
+    f = ui;
+    cout << "float" << f << endl;
+    f += 1;
+    cout << "float + 1" << f << endl;
+    float pre_val = f;
+    short count = 0;
+    do {
+        pre_val = f;
+        pre_val += count;
+        count += 1;
+    } while (f == pre_val);
+    cout << to_string(pre_val) << "|" << to_string(f) << endl;
+    cout << "how much plusus :" << count << endl;
 
-     unsigned long int lli = -1;
-     double df = lli;
+    unsigned long int lli = -1;
+    double df = lli;
+    cout << "double : " << df << endl;
+    df += 7705;
+    cout << "double + 1 : " << df << endl;
 
-     return 0;
+    float tf = 10.0;
+    float delta = 0.0000001;
+    if(tf == tf+delta){ // если tf = 1.0 ,то delta = 1e-08 если tf = 10 ,то delta = 1e-07
+        cout << "min delta : " << delta << endl;
+
+    }
+
+
+    return 0;
 }
